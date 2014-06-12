@@ -52,6 +52,9 @@
       GHOSTIUM.haveGA = typeof ga_ua !== 'undefined' && ga_ua !== 'UA-XXXXX-X';
       GHOSTIUM.haveDisqus = typeof disqus_shortname !== 'undefined' && disqus_shortname !== 'example';
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
+      GHOSTIUM.haveMailChimp = typeof mailchimp_subscribe_domain !== 'undefined' && mailchimp_subscribe_domain !== 'example' 
+                            && typeof mailchimp_list_u !== 'undefined' && mailchimp_list_u !== 'example' 
+                            && typeof mailchimp_list_id !== 'undefined' && mailchimp_list_id !== 'example';
     </script>
 
     <script src="{{asset 'js/head-scripts.min.js'}}"></script>

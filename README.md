@@ -61,6 +61,18 @@ Configurable javascript identifiers.
 
 * `ga_ua`: Your [Google Analitycs](https://support.google.com/analytics/answer/1032385) account identifier
 * `disqus_shortname`: Your [Disqus](http://help.disqus.com/customer/portal/articles/466208) unique identifier
+* `mailchimp_subscribe_domain`: Your MailChimp embedded subscription form domain
+* `mailchimp_list_u`: Your MailChimp embedded subscription form u value
+* `mailchimp_list_id`: Your MailChimp embedded subscription form id value
+
+To find the values to display the MailChimp embedded subscription form, go to your [Lists in MailChimp Admin]("http://admin.mailchimp.com/lists/"), select a list, then navigate to *Signup forms* > *Embedded forms* and find the *action* attribute on the form element in the embed code. The values you need will be in this format: 
+```url
+    http://example.us8.list-manage1.com/subscribe/post?u=ex4mp1eUva1ue&amp;id=ex4mp1e1d
+```
+where the values to extract are:
+```url
+    http://[mailchimp_subscribe_domain]/subscribe/post?u=[mailchimp_list_u]&amp;id=[mailchimp_list_id]
+```
 
 #### meta.hbs
 
